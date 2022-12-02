@@ -78,19 +78,5 @@ const INPUT_FILE_NAME = 'input.txt';
     }
   }
 
-  // // the input.txt file includes an empty line at the end
-  // // if it wouldn't include it, here we'll have to
-  // // push de last value to the array
-
-  // console.log('Number of elves: ' + elvesList.length);
-
-  // elvesList = elvesList.sort((a, b) => {
-  //   return b - a;
-  // });
-
-  // // console.log(elvesList);
-
-  // const topThreeElves = elvesList[0] + elvesList[1] + elvesList[2];
-
   console.log('Total points: ' + total);
 })();
