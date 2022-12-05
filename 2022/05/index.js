@@ -41,60 +41,6 @@ function charValue(A) {
     // console.log(repeatedChar);
 
     total += charValue(repeatedChar);
-
-    /*
-    if (round.length != 2) {
-      console.error('wrong input line');
-      process.exit(1);
-    }
-
-    them = round[0];
-    me = round[1];
-
-    // X means the result has to be a lose for me
-    // Y means the result has to be a draw
-    // Z means the result has to be a win for me
-    switch (me) {
-      case 'X':
-        if (them == 'A') me = 'C';
-        if (them == 'B') me = 'A';
-        if (them == 'C') me = 'B';
-        break;
-      case 'Y': // Y
-        me = them;
-        // if (them == 'A') me = '';
-        // if (them == 'B') me = '';
-        // if (them == 'C') me = '';
-        break;
-      case 'Z': // Z
-        if (them == 'A') me = 'B';
-        if (them == 'B') me = 'C';
-        if (them == 'C') me = 'A';
-        break;
-    }
-
-    console.log(counter + ' - This round has to be, oponent: ' + them + ', me: ' + me);
-    counter++;
-
-    // points
-    switch (me) {
-      case 'A': // X
-        total += 1;
-        if (me == them) total += 3; // draw
-        if (them == 'C') total += 6; // win
-        break;
-      case 'B': // Y
-        total += 2;
-        if (me == them) total += 3; // draw
-        if (them == 'A') total += 6; // win
-        break;
-      case 'C': // Z
-        total += 3;
-        if (me == them) total += 3; // draw
-        if (them == 'B') total += 6; // win
-        break;
-    }
-    */
   }
 
   console.log('Total points: ' + total);
