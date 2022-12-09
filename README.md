@@ -1,6 +1,6 @@
 # advent of code
 
-Here I will store the code I used to pass the puzzles published in [Advent of code](https://adventofcode.com)
+Here I will store the code I used to solve the programming puzzles published in [Advent of code](https://adventofcode.com).
 
 <p align="center">
   <img width="800" alt="advent of code logo" src="./advent-of-code.png">
