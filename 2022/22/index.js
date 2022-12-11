@@ -56,7 +56,7 @@ function showInspectedTimes() {
 
     info = scanf.sscanf(lines[++i], 'Starting items: %S', 'items');
     monkey.items = info.items.split(',').map((item) => {
-      return BigInt(parseInt(item));
+      return parseInt(item);
     });
 
     info = scanf.sscanf(lines[++i], 'Operation: new = %S', 'operation');
@@ -64,12 +64,12 @@ function showInspectedTimes() {
 
     for (let j = 0; j < monkey.operation.length; j++) {
       if (parseInt(monkey.operation[j])) {
-        monkey.operation[j] = BigInt(parseInt(monkey.operation[j]));
+        monkey.operation[j] = parseInt(monkey.operation[j]);
       }
     }
 
     info = scanf.sscanf(lines[++i], 'Test: divisible by %S', 'test');
-    monkey.test = BigInt(parseInt(info.test));
+    monkey.test = parseInt(info.test);
 
     info = scanf.sscanf(lines[++i], 'If true: throw to monkey %S', 'true');
     monkey.true = parseInt(info.true);
@@ -83,13 +83,18 @@ function showInspectedTimes() {
     monkeys.push(monkey);
   }
 
-  for (let i = 1; i < NUM_ROUNDS; i++) {
-    console.log(' -----> ROUND: ' + i);
+  // calculate the lowest common multiple of all the test(divisible) values
 
-    if (i > 2000) {
-      showInspectedTimes();
-      return 1;
-    }
+  let lcm = 1;
+
+  for (let monkey of monkeys) {
+    lcm *= monkey.test;
+  }
+
+  console.log('Lowest common multiple: ' + lcm);
+
+  for (let i = 1; i < NUM_ROUNDS + 1; i++) {
+    // console.log(' -----> ROUND: ' + i);
 
     for (let j = 0; j < monkeys.length; j++) {
       for (let k = 0; k < monkeys[j].items.length; k++) {
@@ -100,13 +105,15 @@ function showInspectedTimes() {
         // empty concat to make a new reference to a new array
         let newValue = operation(monkeys[j].items[k], monkeys[j].operation.concat([]));
 
-        // HERE are the problems, we have to use BigInt to avoid this happening
-        if (Number.isSafeInteger(newValue)) console.log('DANGER DANGER!!!!');
+        // HERE are the problems
+        if (!Number.isSafeInteger(newValue)) console.log('DANGER DANGER!!!!');
 
         // gets bored -> not anymore!
         // newValue = Math.floor(newValue / 3);
 
-        let isDivisible = newValue % monkeys[j].test === 0n;
+        let isDivisible = newValue % monkeys[j].test == 0;
+
+        newValue = newValue % lcm;
 
         // console.log(
         //   'new value: ' +
@@ -134,11 +141,13 @@ function showInspectedTimes() {
     // console.info(monkeys);
   }
 
+  console.info(monkeys);
+  showInspectedTimes();
+
   // sort by times they inspected items
   monkeys.sort((a, b) => {
     return b.inspected - a.inspected;
   });
 
-  console.info(monkeys);
   console.info('Monkey business: ' + monkeys[0].inspected * monkeys[1].inspected);
 })();
