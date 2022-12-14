@@ -8,20 +8,6 @@ let packets = [];
 
 function parsePacket(line) {
   return JSON.parse(line);
-
-  // console.log('parsePacket: ' + line);
-  // if (line[0] === '[') {
-  //   // let info = scanf.sscanf(line, '[%s]%S', 'content');
-  //   // console.log(info);
-  //   return [parsePacket(line.substring(1, line.length - 1))];
-  // } else {
-  //   let pieces = line.split(',');
-  //   if (pieces.length > 1) {
-  //     return pieces.map((elem) => parsePacket(elem));
-  //   } else {
-  //     return parseInt(line);
-  //   }
-  // }
 }
 
 function comparePackets(a, b) {
@@ -29,7 +15,7 @@ function comparePackets(a, b) {
 
   let i = 0;
 
-  for (let i = 0; i < a.length; i++) {
+  for (i = 0; i < a.length; i++) {
     let left = a[i];
     let right = b[i];
 
