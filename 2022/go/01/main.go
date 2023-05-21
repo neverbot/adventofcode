@@ -11,20 +11,38 @@ import (
 func main() {
 	fmt.Println("Reading elf calories...")
 
-	file, err := os.Open("input.txt")
-	if err != nil {
-		fmt.Println(err)
+	var filename string
+	var found bool = false
+
+	// check cli arguments to see if we have a filename
+	for i := 1; i < len(os.Args); i++ {
+		if os.Args[i] == "--input" && i+1 < len(os.Args) {
+			found = true
+			filename = os.Args[i+1]
+		}
 	}
 
+	if !found {
+		fmt.Println("Please specify input file with --input <filename>")
+		os.Exit(1)
+	}
+
+	// open the file with initial data
+	file, err := os.Open(filename)
+	if err != nil {
+		fmt.Println("Error opening file: " + filename)
+		os.Exit(1)
+	}
 	defer file.Close()
 
+	// create a scanner to read the file line by line
 	scanner := bufio.NewScanner(file)
 
 	var currentElf int = 1
 	var calories int = 0
-	// var line string
 	var maxCalories = 0
 
+	// read every line of the file
 	for scanner.Scan() {
 
 		line := scanner.Text()
@@ -55,5 +73,4 @@ func main() {
 
 	fmt.Println("Number of elves:", currentElf)
 	fmt.Println("Elf with most calories:", maxCalories)
-
 }
