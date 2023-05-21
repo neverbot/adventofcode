@@ -1,0 +1,55 @@
+{
+  "env": {
+    "es2020": true,
+    "node": true,
+    "mocha": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    },
+    "babelOptions": {
+      "parserOpts": {
+        "plugins": [
+          "importAssertions"
+        ]
+      }
+    }
+  },
+  "globals": {},
+  "extends": [
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings"
+  ],
+  "plugins": [
+    "prettier",
+    "json-format"
+  ],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": true
+      }
+    ],
+    "no-console": 0,
+    "no-debugger": 1,
+    "require-atomic-updates": 0,
+    "import/extensions": [
+      "warn",
+      "always",
+      {
+        "js": "always",
+        "json": "always"
+      }
+    ]
+  }
+}
