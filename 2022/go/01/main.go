@@ -29,10 +29,12 @@ func main() {
 
 	// open the file with initial data
 	file, err := os.Open(filename)
+
 	if err != nil {
 		fmt.Println("Error opening file: " + filename)
 		os.Exit(1)
 	}
+
 	defer file.Close()
 
 	// create a scanner to read the file line by line
@@ -40,12 +42,13 @@ func main() {
 
 	var currentElf int = 1
 	var calories int = 0
-	var maxCalories = 0
+	var maxCalories int = 0
 
 	// read every line of the file
 	for scanner.Scan() {
 
 		line := scanner.Text()
+
 		if err := scanner.Err(); err != nil {
 			log.Fatal(err)
 		}
@@ -64,6 +67,7 @@ func main() {
 
 		// fmt.Println("Line: ", line)
 		value, err := strconv.Atoi(line)
+
 		if err != nil {
 			log.Fatal(err)
 		}
