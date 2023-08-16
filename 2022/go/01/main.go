@@ -11,8 +11,8 @@ import (
 func main() {
 	fmt.Println("Reading elf calories...")
 
-	var filename string
-	var found bool = false
+	filename := ""
+	found := false
 
 	// check cli arguments to see if we have a filename
 	for i := 1; i < len(os.Args); i++ {
@@ -40,9 +40,9 @@ func main() {
 	// create a scanner to read the file line by line
 	scanner := bufio.NewScanner(file)
 
-	var currentElf int = 1
-	var calories int = 0
-	var maxCalories int = 0
+	currentElf := 1
+	calories := 0
+	maxCalories := 0
 
 	// read every line of the file
 	for scanner.Scan() {
