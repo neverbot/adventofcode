@@ -18,7 +18,7 @@ A repository for some coding contests/challenges.
 [Here](./project-euler) I will store the code I used to solve the programming puzzles published in [Project Euler](https://projecteuler.net).
 
 <p align="center">
-  <img width="400" alt="advent of code logo" src="https://projecteuler.net/profile/Neverbot.png">
+  <img alt="project euler user info" src="https://projecteuler.net/profile/Neverbot.png">
 </p>
 
 > _Project Euler_ is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.
