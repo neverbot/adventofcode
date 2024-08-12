@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	// "bufio"
@@ -35,7 +35,8 @@ import (
 // 	return lines
 // }
 
-func readInputArgs() map[string]string {
+// ReadInputArgs reads the input arguments from the command line
+func ReadInputArgs() map[string]string {
 
 	// create a mapping to store input arguments
 	arguments := make(map[string]string)

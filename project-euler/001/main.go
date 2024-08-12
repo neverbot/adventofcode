@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"main/utils"
 )
 
 func main() {
 	fmt.Println("Multiples of 3 or 5")
 
-	arguments := readInputArgs()
+	arguments := utils.ReadInputArgs()
 
 	value, err := strconv.Atoi(arguments["value"])
 

@@ -1,3 +1,3 @@
-module project-euler/003
+module main
 
 go 1.20

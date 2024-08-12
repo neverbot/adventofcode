@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"main/utils"
 )
 
 func getFactors(value int) []int {
@@ -21,7 +23,7 @@ func getFactors(value int) []int {
 func main() {
 	fmt.Println("Largest Prime Factor")
 
-	arguments := readInputArgs()
+	arguments := utils.ReadInputArgs()
 
 	value, err := strconv.Atoi(arguments["value"])
 
@@ -32,5 +34,4 @@ func main() {
 
 	factors := getFactors(value)
 	fmt.Println("Factors:", factors)
-
 }

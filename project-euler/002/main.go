@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+
+	"main/utils"
 )
 
 func main() {
 	fmt.Println("Even Fibonacci Numbers")
 
-	arguments := readInputArgs()
+	arguments := utils.ReadInputArgs()
 
 	value, err := strconv.Atoi(arguments["value"])
 
