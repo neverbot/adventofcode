@@ -11,9 +11,13 @@ import (
 func getFactors(value int) []int {
 	factors := []int{}
 
-	for i := 2; i <= value/2; i++ {
+	for i := 2; i <= value; i++ {
+
 		if value%i == 0 {
 			factors = append(factors, i)
+		}
+		for value%i == 0 {
+			value = value / i
 		}
 	}
 
