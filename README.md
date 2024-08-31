@@ -22,3 +22,13 @@ A repository for some coding contests/challenges.
 </p>
 
 > _Project Euler_ is a series of challenging mathematical/computer programming problems that will require more than just mathematical insights to solve. Although mathematics will help you arrive at elegant and efficient methods, the use of a computer and programming skills will be required to solve most problems.
+
+## The C Programming Language
+
+[Here](./the-c-programming-language) I will store the code I used to solve the programming exercises from the book [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language).
+
+<p align="center">
+  <img width="400" alt="The C Programming Language book cover" src="./assets/the-c-programming-language.jpg">
+</p>
+
+> _The C Programming Language_ (sometimes termed _K&R_, after its authors' initials) is a computer programming book written by Brian Kernighan and Dennis Ritchie. The book was central to the development and popularization of the C programming language and is still widely read and used today.
