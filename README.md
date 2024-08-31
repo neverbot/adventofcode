@@ -28,7 +28,7 @@ A repository for some coding contests/challenges.
 [Here](./the-c-programming-language) I will store the code I used to solve the programming exercises from the book [The C Programming Language](https://en.wikipedia.org/wiki/The_C_Programming_Language).
 
 <p align="center">
-  <img width="400" alt="The C Programming Language book cover" src="./assets/the-c-programming-language.jpg">
+  <img width="200" alt="The C Programming Language book cover" src="./assets/the-c-programming-language.jpg">
 </p>
 
 > _The C Programming Language_ (sometimes termed _K&R_, after its authors' initials) is a computer programming book written by Brian Kernighan and Dennis Ritchie. The book was central to the development and popularization of the C programming language and is still widely read and used today.
