@@ -1,6 +1,0 @@
-!.*.json
-package.json
-package-lock.json
-coverage/*
-
-*.md
